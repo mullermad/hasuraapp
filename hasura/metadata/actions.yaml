@@ -1,0 +1,25 @@
+actions:
+  - name: signup
+    definition:
+      kind: synchronous
+      handler: http://host.docker.internal:5000/signup
+  - name: uploadMoviePoster
+    definition:
+      kind: synchronous
+      handler: http://host.docker.internal:5000/upload
+  - name: userLogin
+    definition:
+      kind: synchronous
+      handler: http://host.docker.internal:5000/login
+custom_types:
+  enums: []
+  input_objects:
+    - name: userLoginInput
+    - name: UploadMoviePosterInput
+  objects:
+    - name: signupOutput
+    - name: loginOutput
+    - name: LoginOutput
+    - name: userLoginOutput
+    - name: Movie
+  scalars: []

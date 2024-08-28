@@ -1,0 +1,57 @@
+type Mutation {
+  signup(
+    username: String!
+    email: String!
+    password: String!
+  ): signupOutput
+}
+
+type Mutation {
+  uploadMoviePoster(
+    input: UploadMoviePosterInput!
+  ): Movie!
+}
+
+type Mutation {
+  userLogin(
+    object: userLoginInput!
+  ): userLoginOutput
+}
+
+input userLoginInput {
+  email: String
+  password: String
+}
+
+input UploadMoviePosterInput {
+  file: String!
+}
+
+type signupOutput {
+  user_id: uuid!
+}
+
+type loginOutput {
+  email: String!
+  password: String!
+  user_id: Int!
+  username: String!
+}
+
+type LoginOutput {
+  email: String!
+  password: String!
+  user_id: Int!
+  username: String!
+}
+
+type userLoginOutput {
+  user_id: uuid!
+  token: String
+  role: String
+}
+
+type Movie {
+  url: String!
+}
+

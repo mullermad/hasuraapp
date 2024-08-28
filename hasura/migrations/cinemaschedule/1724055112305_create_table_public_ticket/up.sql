@@ -1,0 +1,1 @@
+CREATE TABLE "public"."ticket" ("ticket_id" uuid NOT NULL, "user_id" integer NOT NULL, "schedule_id" integer NOT NULL, "purchase_date" timestamptz NOT NULL DEFAULT now(), "quantity" integer NOT NULL, PRIMARY KEY ("ticket_id") );

@@ -1,0 +1,25 @@
+table:
+  name: movie
+  schema: public
+object_relationships:
+  - name: director
+    using:
+      foreign_key_constraint_on: director_id
+  - name: genre
+    using:
+      foreign_key_constraint_on: genre_id
+array_relationships:
+  - name: ratings
+    using:
+      foreign_key_constraint_on:
+        column: movie_id
+        table:
+          name: rating
+          schema: public
+  - name: schedules
+    using:
+      foreign_key_constraint_on:
+        column: movie_id
+        table:
+          name: schedule
+          schema: public

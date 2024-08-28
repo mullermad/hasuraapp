@@ -1,0 +1,2 @@
+CREATE TABLE "public"."checkout" ("checkout_id" uuid NOT NULL DEFAULT gen_random_uuid(), "movie" text NOT NULL, "showtime" timestamptz NOT NULL, "cinema" text NOT NULL, "select_seats" jsonb NOT NULL, "payment_method" text NOT NULL, "card_number" Integer NOT NULL, "CVV" text NOT NULL, PRIMARY KEY ("checkout_id") , FOREIGN KEY ("checkout_id") REFERENCES "public"."user"("user_id") ON UPDATE restrict ON DELETE cascade);
+CREATE EXTENSION IF NOT EXISTS pgcrypto;

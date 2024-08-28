@@ -1,0 +1,3 @@
+table:
+  name: movie_star
+  schema: public
